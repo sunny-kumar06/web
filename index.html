@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SunnyWebs</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      min-height: 100vh;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background: linear-gradient(135deg, #0077ff, #00c6ff);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      padding: 12px 20px;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 28px;
+      text-shadow: 2px 2px 10px rgba(255,255,255,0.7);
+    }
+
+    .nav-link {
+      font-size: 18px;
+      font-weight: 500;
+      color: white !important;
+      padding: 8px 12px;
+      border-radius: 10px;
+    }
+
+    .nav-link:hover {
+      background: rgba(255,255,255,0.5);
+      color: #000 !important;
+      transition: 0.3s;
+    }
+
+    /* Card hover effect */
+    .card {
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+    }
+    .beat-heart {
+  width: 120px;
+  height: 120px;
+  background: red;
+  position: relative;
+  transform: rotate(-45deg);
+  margin: 60px auto;
+  animation: beat 0.6s infinite;
+}
+
+.beat-heart::before,
+.beat-heart::after {
+  content: "";
+  width: 120px;
+  height: 120px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.beat-heart::before {
+  top: -60px;
+  left: 0;
+}
+
+.beat-heart::after {
+  left: 60px;
+  top: 0;
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1) rotate(-45deg); }
+  50% { transform: scale(1.2) rotate(-45deg); }
+}
+
+
+  </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-lg">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#">🌐 SunnyWebs</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item">
+          <a class="nav-link active" href="Option.html">Fun Option</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="certificates.html">Chotku certificates</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ================= TITLE ================= -->
+<h1 class="text-center mt-4 fw-bold">Special date 28th of NOVEMBER <div class="beat-heart"></div> </h1>
+
+<div class="container mt-3">
+  <p class="p-3 bg-white rounded-4 shadow-sm">
+    She is the softest part of my world — innocent, emotional, and beautifully sensitive. Even a little distance makes her miss me, because her heart loves with a purity that’s rare. She trusts me completely, and that trust is something I treasure deeply.
+We first met on 28th November, and today is 28th November again — the same date that brought her into my life. This day will always feel special to me because it reminds me of the moment everything changed.
+She may be a little naïve or childish sometimes, but that innocence is exactly what makes her precious to me. In her simplicity, I find peace… in her eyes, I find comfort… and in her love, I find my home. She isn’t just my girlfriend — she is my favourite person, my sweetest emotion, and the most beautiful part of my life.
+  </p>
+</div>
+
+
+<!-- ================= CARDS SECTION ================= -->
+<div class="container mt-4">
+
+  <!-- ===== Row 1 : 5 Cards ===== -->
+  <div class="row g-4 justify-content-center">
+
+    <div class="col-6 col-md-2">
+      <div class="card">
+        <img src="pilla1.jpeg" class="card-img-top" style="padding:5%;">
+        <div class="card-body" style="background:#64cb7b;">
+          <p class="card-text">Card 1 - Chotu ka dimaag</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <div class="card">
+        <img src="pilla2.jpeg" class="card-img-top" style="padding:5%;">
+        <div class="card-body" style="background:#64cb7b;">
+          <p class="card-text">Card 2 - Dimaag kam hai</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <div class="card">
+        <img src="pilla3.jpeg" class="card-img-top" style="padding:5%;">
+        <div class="card-body" style="background:#64cb7b;">
+          <p class="card-text">Card 3 - Cute Chotu</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <div class="card">
+        <img src="pilla8.jpeg" class="card-img-top" style="padding:5%;">
+        <div class="card-body" style="background:#64cb7b;">
+          <p class="card-text">Card 4 - Ultra Chotu</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <div class="card">
+        <img src="pilla5.jpeg" class="card-img-top" style="padding:5%;">
+        <div class="card-body" style="background:#64cb7b;">
+          <p class="card-text">Card 5 - Smart Chotu</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+   
+
+
+  <!-- GAP -->
+  <div class="my-4"></div>
+
+  <!-- ===== Row 2 : 2 Cards ===== -->
+  <div class="row g-4 justify-content-center">
+
+    <div class="col-6 col-md-3">
+      <div class="card">
+        <img src="pilla6.jpeg" class="card-img-top" style="padding:5%;">
+        <div class="card-body" style="background:#64cb7b;">
+          <p class="card-text">Card 6 - Naya Chotu</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-6 col-md-2">
+      <div class="card">
+        <img src="pilla12.jpeg" class="card-img-top" style="padding:5%;">
+        <div class="card-body" style="background:#64cb7b;">
+          <p class="card-text">Card 2 - Dimaag kam hai</p>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-6 col-md-2">
+      <div class="card">
+        <img src="pilla2.jpeg" class="card-img-top" style="padding:5%;">
+        <div class="card-body" style="background:#64cb7b;">
+          <p class="card-text">Card 2 - Dimaag kam hai</p>
+        </div>
+      </div>
+    </div>
+ 
+    
+    <div class="col-6 col-md-2">
+      <div class="card">
+        <img src="pilla16.jpeg" class="card-img-top" style="padding:5%;">
+        <div class="card-body" style="background:#64cb7b;">
+          <p class="card-text">Card 2 - Dimaag kam hai</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col-6 col-md-3">
+      <div class="card">
+        <img src="pilla13.jpeg" class="card-img-top" style="padding:5%;">
+        <div class="card-body" style="background:#64cb7b;">
+          <p class="card-text">Card 7 - Super Chotu</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- Bootstrap JS -->
+
+
+</body>
+</html>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

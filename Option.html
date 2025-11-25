@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fun Love Questions</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg,#ffafbd,#ffc3a0);
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden; /* prevent scroll */
+    }
+
+    #box {
+        width: 400px;
+        background: white;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        text-align: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    h2 {
+        margin-bottom: 15px;
+    }
+
+    input {
+        width: 90%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #aaa;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    button {
+        padding: 10px 20px;
+        border-radius: 999px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #nextBtn {
+        background: #0077ff;
+        color: white;
+    }
+
+    #yesBtn {
+        background: #22c55e;
+        color: white;
+        font-weight: bold;
+        position: relative;
+        z-index: 20;
+    }
+
+    #noBtn {
+        background: #ef4444;
+        color: white;
+        position: absolute;
+        padding: 10px 20px;
+        border-radius: 30px;
+        cursor: pointer;
+        z-index: 20;
+    }
+
+    #finalMsg {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #16a34a;
+        font-weight: bold;
+        min-height: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div id="box">
+    <h2 id="question">Q1: Hum kab मिले थे? 🥺</h2>
+    <input id="answer" placeholder="Yaha answer likho..." />
+
+    <button id="nextBtn" onclick="nextQuestion()">Next ➜</button>
+
+    <div id="buttons" style="display:none; position: relative; height: 150px; margin-top: 20px;">
+        <button id="yesBtn">YES 😘</button>
+        <button id="noBtn">NO 😒</button>
+    </div>
+
+    <div id="finalMsg"></div>
+</div>
+
+<script>
+let step = 1;
+
+function nextQuestion() {
+    let ans = document.getElementById("answer").value.trim();
+
+    if (ans === "") {
+        alert("Pehle answer likho na baby 😭");
+        return;
+    }
+
+    step++;
+
+    if (step === 2) {
+        document.getElementById("question").innerHTML = "Q2: Hum kahan मिले थे? 💕";
+    }
+    else if (step === 3) {
+        document.getElementById("question").innerHTML = "Q3: Tum chhoti kyun ho? 😂❤️";
+    }
+    else if (step === 4) {
+        document.getElementById("question").innerHTML = "Q4: Tumhara naam kya hai? 😇";
+    }
+    else if (step === 5) {
+        document.getElementById("question").innerHTML = "Q5: Tumhare paas दिमाग क्यों नहीं है? 🤣💗";
+    }
+    else if (step === 6) {
+        document.getElementById("question").innerHTML = "Last Question ❤️";
+        document.getElementById("answer").style.display = "none";
+        document.getElementById("nextBtn").style.display = "none";
+        document.getElementById("buttons").style.display = "block";
+        startFinal();
+    }
+
+    document.getElementById("answer").value = "";
+}
+
+
+// FINAL LOGIC
+function startFinal() {
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const msg = document.getElementById("finalMsg");
+
+    yesBtn.addEventListener("click", () => {
+        msg.innerHTML = "I knew it! I love you too my baby ❤️😘💋";
+    });
+
+    // Move NO button safely inside screen
+    noBtn.addEventListener("mouseenter", moveBtn);
+    noBtn.addEventListener("click", moveBtn);
+}
+
+
+// Move NO button within SCREEN boundaries — never disappears
+function moveBtn() {
+    const noBtn = document.getElementById("noBtn");
+
+    let screenWidth = window.innerWidth - noBtn.offsetWidth - 20;
+    let screenHeight = window.innerHeight - noBtn.offsetHeight - 20;
+
+    let randomX = Math.random() * screenWidth;
+    let randomY = Math.random() * screenHeight;
+
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
+}
+</script>
+
+</body>
+</html>
